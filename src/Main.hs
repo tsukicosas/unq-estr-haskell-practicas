@@ -6,8 +6,12 @@ import Practica4
 
 -- | The main entry point.
 
-test1 = TestCase (assertEqual "for (foo 3)," 4 (siguiente 3) )
-tests = TestList [TestLabel "test1" test1]
+testSuma = TestCase (
+           assertEqual "Para (siguiente 3),"  4 (siguiente 3)
+    )
+
+
+tests = TestList [TestLabel "Test Suma" testSuma ]
 
 
 main = runTestTT tests
