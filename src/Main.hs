@@ -1,10 +1,13 @@
 -- | Main entry point to the application.
 module Main where
 
--- | The main entry point.
-main :: IO ()
-main = do
-    putStrLn "Welcome to FP Haskell Center!"
-    putStrLn "Have a good day!"
+import Test.HUnit
+import Practica4
 
-sarasa = 4
+-- | The main entry point.
+
+test1 = TestCase (assertEqual "for (foo 3)," 4 (siguiente 3) )
+tests = TestList [TestLabel "test1" test1]
+
+
+main = runTestTT tests
