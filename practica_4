@@ -1,1 +1,2 @@
 suma a b = a + b
+siguiente a = a+1
